@@ -4,21 +4,16 @@ import {IButtonProps} from './interfaces';
 
 const Button: IButtonProps = function Button({children, onPress, style}) {
   return (
-    <View style={styles.rootContainer}>
+    <View style={[styles.rootContainer, style]}>
       <Pressable
         onPress={onPress}
         style={({pressed}) =>
           pressed
-            ? [
-                styles.pressed,
-                styles.buttonContainer,
-              ]
-            : [styles.buttonContainer, {backgroundColor: '#4545EE' }]
+            ? [styles.pressed, styles.buttonContainer]
+            : [styles.buttonContainer, {backgroundColor: '#28C7AC'}, style]
         }
-        android_ripple={{color: '#F3F3F3'}}>
-        <Text style={[styles.buttonText, {color: 'white'}, style]}>
-          {children}
-        </Text>
+        android_ripple={{color: '#2b2a2a36'}}>
+        <Text style={[styles.buttonText, {color: 'white'}]}>{children}</Text>
       </Pressable>
     </View>
   );
@@ -36,6 +31,10 @@ const styles = StyleSheet.create({
     height: 48,
     justifyContent: 'center',
     overflow: 'hidden',
+    shadowColor: '#ffffff00',
+    shadowOpacity: 0.6,
+    elevation: 1,
+    shadowOffset: {width: 0, height: 6},
   },
   buttonText: {
     textAlign: 'center',
