@@ -1,28 +1,30 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image, Pressable} from 'react-native';
+import {Text, View, StyleSheet, Image} from 'react-native';
 import Button from '../../components/Button/Button';
-import { HomeProp } from './interfaces';
+import {HomeProp} from './interfaces';
 
 const Home: HomeProp = function Home({navigation}) {
-
-
   const startEpisodes = React.useCallback(() => {
-    navigation.navigate("SymptomList");
-  }, [navigation])
+    navigation.navigate('SymptomQuestions');
+  }, [navigation]);
 
   return (
     <View style={styles.rootContainer}>
-      <View style={styles.headerContainer} >
-        <Text style={{fontSize: 24, color: '#000000', fontWeight: '700'}}>Welcome
+      <View style={styles.headerContainer}>
+        <Text style={{fontSize: 24, color: '#000000', fontWeight: '700'}}>
+          Welcome ALABA
         </Text>
-        <Text style={styles.symptomText}>Select the symptoms that you are facing</Text>
-    </View>
-    
-    <Image source={require('../../assets/images/depressive_img.png')} style={styles.image} />
-    <Button style={styles.startButton} onPress={startEpisodes}>
-      Start
-    </Button>
-
+        <Text style={styles.symptomText}>
+          Select the symptoms that you are facing
+        </Text>
+      </View>
+      <Image
+        source={require('../../assets/images/depressive_img.png')}
+        style={styles.image}
+      />
+      <Button style={styles.startButton} onPress={startEpisodes}>
+        Start
+      </Button>
     </View>
   );
 };
@@ -41,17 +43,15 @@ const styles = StyleSheet.create({
   symptomText: {
     color: 'black',
     fontSize: 14,
-    fontWeight: '500'
+    fontWeight: '500',
   },
   image: {
     marginVertical: 54,
     width: 354,
     height: 354,
-    resizeMode: 'cover'
+    resizeMode: 'cover',
   },
   startButton: {
-    fontWeight: 'bold'
-  }
-  
-  
+    fontWeight: 'bold',
+  },
 });
