@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
-import { IDepressiveEpisodesParamList } from "../../navigation/interfaces";
+import {IDepressiveEpisodesParamList} from '../../navigation/interfaces';
 
 export type HomeProp = React.FC<
-    StackScreenProps<IDepressiveEpisodesParamList, 'Home'>
-    >
+  StackScreenProps<IDepressiveEpisodesParamList, 'Home'>
+>;
