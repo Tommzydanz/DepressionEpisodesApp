@@ -5,7 +5,7 @@ import DepressiveEpisodeStack from './DepressiveEpisodesStack';
 const AppNavigationContainer: React.FC<{}> = function AppNavigationContainer() {
   return (
     <NavigationContainer>
-      <DepressiveEpisodeStack/>
+      <DepressiveEpisodeStack />
     </NavigationContainer>
   );
 };
