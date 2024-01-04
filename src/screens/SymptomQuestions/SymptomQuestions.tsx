@@ -27,7 +27,8 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
   const [fadeAnim] = useState(new Animated.Value(1)); // Initial opacity for the card
 
   const handleAnswer = useCallback(
-    answer => {
+    (questionId: number, answer: string) => {
+      console.log(`Answer to question ID ${questionId}: ${answer}`);
       // Animate card out
       Animated.timing(fadeAnim, {
         toValue: 0,
@@ -61,15 +62,11 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
         </Text>
       </View>
       <View style={styles.answerContainer}>
-        <Button style={styles.noButton} onPress={() => onAnswer('No')}>
+        <Button style={styles.noButton} onPress={() => handleAnswer(1, 'No')}>
           {' '}
           No
         </Button>
-        <Button
-          style={styles.yesButton}
-          onPress={() =>
-            onAnswer('Yes', allQuestions[currentSymptomQuestionIndex]?.Question)
-          }>
+        <Button style={styles.yesButton} onPress={() => handleAnswer(2, 'Yes')}>
           {' '}
           Yes
         </Button>
