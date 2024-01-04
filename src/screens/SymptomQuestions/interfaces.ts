@@ -11,6 +11,6 @@ export type SymptomQuestion = {
 export type SymptomQuestionsProp = React.FC<
   StackScreenProps<IDepressiveEpisodesParamList, 'SymptomQuestions'> & {
     data: SymptomQuestion[];
-    onAnswer: (answer: 'Yes' | 'No', questionId: number) => void;
+    onAnswer: (questionId: number, answer: string) => void;
   }
 >;
