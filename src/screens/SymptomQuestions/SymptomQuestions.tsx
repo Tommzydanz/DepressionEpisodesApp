@@ -2,11 +2,9 @@ import React, {useCallback, useState} from 'react';
 import {
   View,
   Text,
-  Pressable,
   StyleSheet,
   Dimensions,
   ImageBackground,
-  Animated,
 } from 'react-native';
 import {SymptomQuestionsProp} from './interfaces';
 import {QUESTIONNAIRE} from '../../data/questionnaire';
@@ -20,53 +18,58 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
   navigation,
 }) {
   data = QUESTIONNAIRE;
-
   const allQuestions = data;
   const [currentSymptomQuestionIndex, setCurrentSymptomQuestionIndex] =
     useState<number>(0);
-  const [fadeAnim] = useState(new Animated.Value(1)); // Initial opacity for the card
 
   const handleAnswer = useCallback(
     (questionId: number, answer: string) => {
       console.log(`Answer to question ID ${questionId}: ${answer}`);
-      // Animate card out
-      Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }).start(() => {
-        // Update question index and reset animation
-        setCurrentSymptomQuestionIndex(currentSymptomQuestionIndex + 1);
-        fadeAnim.setValue(1);
-      });
+
+      setCurrentSymptomQuestionIndex(currentSymptomQuestionIndex + 1);
     },
-    [currentSymptomQuestionIndex, fadeAnim],
+    [currentSymptomQuestionIndex],
   );
+
   return (
     <ImageBackground
       source={require('../../assets/images/background.png')}
       style={styles.container}>
       <Text style={styles.screenTitle}>Questions</Text>
-      <View style={styles.questionContainer}>
-        <View style={styles.counterContainer}>
-          <Text style={styles.counterText}>
-            {currentSymptomQuestionIndex + 1}
-          </Text>
-          <Text style={styles.counterLastIndexText}>
-            {' '}
-            / {allQuestions.length}
-          </Text>
-        </View>
-        <Text style={styles.questionText}>
-          {allQuestions[currentSymptomQuestionIndex]?.Question}
-        </Text>
+      <View style={{flex: 1, alignContent: 'center', justifyContent: 'center'}}>
+        {allQuestions.map((question, index) => {
+          if (index === currentSymptomQuestionIndex) {
+            return (
+              <Animated.View
+                style={[styles.questionContainer]}
+                key={question.ID}>
+                <View style={styles.counterContainer}>
+                  <Text style={styles.counterText}>{index + 1}</Text>
+                  <Text style={styles.counterLastIndexText}>
+                    {' '}
+                    / {allQuestions.length}
+                  </Text>
+                </View>
+                <Text style={styles.questionText}>{question.Question}</Text>
+              </Animated.View>
+            );
+          }
+        })}
       </View>
       <View style={styles.answerContainer}>
-        <Button style={styles.noButton} onPress={() => handleAnswer(1, 'No')}>
+        <Button
+          style={styles.noButton}
+          onPress={() =>
+            handleAnswer(allQuestions[currentSymptomQuestionIndex].ID, 'No')
+          }>
           {' '}
           No
         </Button>
-        <Button style={styles.yesButton} onPress={() => handleAnswer(2, 'Yes')}>
+        <Button
+          style={styles.yesButton}
+          onPress={() =>
+            handleAnswer(allQuestions[currentSymptomQuestionIndex].ID, 'Yes')
+          }>
           {' '}
           Yes
         </Button>
@@ -79,6 +82,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 48,
+    marginBottom: 23,
     // or any color that fits the background of your app
   },
   screenTitle: {
@@ -113,11 +117,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 50,
+    marginTop: 56,
+    marginBottom: 10,
+    height: 400,
+    width: '90%',
     borderRadius: 10,
-    flex: 1,
-    paddingHorizontal: 20,
-    marginHorizontal: 12,
+    paddingHorizontal: 10,
+    marginHorizontal: 22,
   },
   questionText: {
     fontSize: 28,
@@ -125,6 +131,7 @@ const styles = StyleSheet.create({
     marginBottom: 120,
     fontWeight: 'bold',
     textAlign: 'center',
+    alignSelf: 'center',
     color: 'black',
   },
   answerContainer: {
