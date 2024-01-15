@@ -1,6 +1,7 @@
 export const DISEASES = [
   {
-    'Neurodevelopmental Disorders': [
+    disease: 'Neurodevelopmental Disorders',
+    symptoms: [
       'Anxiety',
       'Clumsiness',
       'Posturing',
@@ -14,7 +15,10 @@ export const DISEASES = [
       'Difficult understanding',
       'Delayed language Development',
     ],
-    'Obsessive-Compulsive and Related Disorders': [
+  },
+  {
+    disease: 'Obsessive-Compulsive and Related Disorders',
+    symptoms: [
       'Repetitive behaviors',
       'Persistent preoccupation',
       'Accumulation of a large number of possessions',
@@ -22,14 +26,20 @@ export const DISEASES = [
       'Recurrent and intrusive thoughts',
       'Anxiety',
     ],
-    'Schizophrenia Spectrum and Other Psychotic Disorders': [
+  },
+  {
+    disease: 'Schizophrenia Spectrum and Other Psychotic Disorders',
+    symptoms: [
       'Persistent delusions',
       'Disorganized behavior',
       'Disorganized thinking',
       'Social withdrawal',
       'Hallucination',
     ],
-    'Bipolar and Related Disorders': [
+  },
+  {
+    disease: 'Bipolar and Related Disorders',
+    symptoms: [
       'Rapid or pressured speech',
       'Flight of ideas',
       'Distractibility',
@@ -39,7 +49,10 @@ export const DISEASES = [
       'Racing thoughts',
       'Increase in sexual drive',
     ],
-    'Depressive Disorders': [
+  },
+  {
+    disease: 'Depressive Disorders',
+    symptoms: [
       'Retardation',
       'Inappropriate guilt',
       'Difficulty concentrating',
@@ -50,7 +63,10 @@ export const DISEASES = [
       'Feeling of worthlessness',
       'Diminished interest in pleasurable activities',
     ],
-    'Trauma- and Stressor-Related Disorders': [
+  },
+  {
+    disease: 'Trauma- and Stressor-Related Disorders',
+    symptoms: [
       'Shortness of breath',
       'Nightmares',
       'Flashbacks',
@@ -62,7 +78,10 @@ export const DISEASES = [
       'Dizziness',
       'Sadness/ fearfulness',
     ],
-    'Dissociative Disorders': [
+  },
+  {
+    disease: 'Dissociative Disorders',
+    symptoms: [
       'Hallucinations',
       'Derealization',
       'Depersonalization',
@@ -71,14 +90,20 @@ export const DISEASES = [
       'Self-mutilations',
       'Numbing',
     ],
-    'Somatic Symptom and Related Disorders': [
+  },
+  {
+    disease: 'Somatic Symptom and Related Disorders',
+    symptoms: [
       'Preoccupation with having a serious illness',
       'Panic disorder',
       'Nausea',
       'Fatigue',
       'Anxiety',
     ],
-    'Feeding and Eating Disorders': [
+  },
+  {
+    disease: 'Feeding and Eating Disorders',
+    symptoms: [
       'Binge eating',
       'Absence of menstrual cycle',
       'Fear of gaining weight',
@@ -89,14 +114,23 @@ export const DISEASES = [
       'Fasting',
       'Eating alone due to embarrassment',
     ],
-    'Elimination Disorders': ['Intentional voiding of urine'],
-    'Sleep-Wake Disorders': [
+  },
+  {
+    disease: 'Elimination Disorders',
+    symptoms: ['Intentional voiding of urine'],
+  },
+  {
+    disease: 'Sleep-Wake Disorders',
+    symptoms: [
       'Excessive sleepiness',
       'Disrupted sleep due to abnormal respiratory',
       'Irresistible need to sleep',
       'Difficulty initiating sleep',
     ],
-    'Substance-Related and Addictive Disorders': [
+  },
+  {
+    disease: 'Substance-Related and Addictive Disorders',
+    symptoms: [
       'Tolerance or withdrawal symptoms',
       'Recurrent substance use resulting in failure to fulfill major role',
       'Unsuccessful efforts to cut down substance use',
@@ -105,7 +139,10 @@ export const DISEASES = [
       'Taking substance in large amounts',
       'Reducing important social',
     ],
-    'Neurocognitive Disorders': [
+  },
+  {
+    disease: 'Neurocognitive Disorders',
+    symptoms: [
       'Variation in attention and alertness',
       'Difficulty with language expression',
       'Progressive memory impairment',
@@ -115,7 +152,10 @@ export const DISEASES = [
       'Muscle stiffness or tremors',
       'Difficulty with comprehension',
     ],
-    'Personality Disorders': [
+  },
+  {
+    disease: 'Personality Disorders',
+    symptoms: [
       'Disregard for and violation of the rights of others',
       'Unstable and intense relationships',
       'Odd thinking and speech patterns',
@@ -145,7 +185,10 @@ export const DISEASES = [
       'Unusual perceptual experiences',
       'Suspicion of others motives',
     ],
-    'Paraphilic Disorders': [
+  },
+  {
+    disease: 'Paraphilic Disorders',
+    symptoms: [
       'beaten',
       'Recurrent and intense sexual arousal from either nonliving objects or a highly specific focus on non-genital body parts',
       'Recurrent and intense sexual arousal from observing an unsuspecting person',

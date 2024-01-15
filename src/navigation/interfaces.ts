@@ -1,7 +1,6 @@
 export type IDepressiveEpisodesParamList = {
   Home: undefined;
-  SymptomQuestions: undefined;
-  SymptomChecker: undefined;
+  SymptomQuestions: any;
   PossibleDiseases: undefined;
   DetailedEpisodeInfo: undefined;
   FavouriteEpisode: undefined;

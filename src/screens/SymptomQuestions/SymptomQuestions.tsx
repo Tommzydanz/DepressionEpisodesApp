@@ -1,14 +1,16 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Dimensions,
   ImageBackground,
+  Image,
 } from 'react-native';
 import {SymptomQuestionsProp} from './interfaces';
 import {QUESTIONNAIRE} from '../../data/questionnaire';
 import Button from '../../components/Button/Button';
+import {DISEASES} from '../../data/diseases';
 
 const {width} = Dimensions.get('window');
 
@@ -17,19 +19,58 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
   onAnswer,
   navigation,
 }) {
+  const diseases = DISEASES;
   data = QUESTIONNAIRE;
   const allQuestions = data;
   const [currentSymptomQuestionIndex, setCurrentSymptomQuestionIndex] =
     useState<number>(0);
+  // Using useState to keep track of matched diseases
+  const [matchedDiseases, setMatchedDiseases] = useState<string[]>([]);
 
   const handleAnswer = useCallback(
     (questionId: number, answer: string) => {
-      console.log(`Answer to question ID ${questionId}: ${answer}`);
-
       setCurrentSymptomQuestionIndex(currentSymptomQuestionIndex + 1);
+
+      // New array to store matched diseases
+      const foundDiseases: string[] = [];
+
+      // Find the symptom associated with the current question
+      const symptom = QUESTIONNAIRE.find(q => q.ID === questionId)?.Symptom;
+
+      if (answer === 'Yes' && symptom) {
+        // Check each disease to see if the symptom is part of it
+        for (const disease in diseases) {
+          if (
+            diseases[disease].symptoms.includes(symptom) &&
+            !matchedDiseases.includes(diseases[disease].disease)
+          ) {
+            foundDiseases.push(diseases[disease].disease);
+          }
+        }
+
+        if (foundDiseases.length > 0) {
+          setMatchedDiseases(prevDiseases => [
+            ...prevDiseases,
+            ...foundDiseases,
+          ]);
+          console.log(matchedDiseases);
+        }
+      }
+
+      // if (currentSymptomQuestionIndex === data.length - 1) {
+      //   navigation.navigate('PossibleDiseases');
+      // }
+      console.log(`Answer to question ID ${questionId}: ${answer}`);
     },
-    [currentSymptomQuestionIndex],
+    [currentSymptomQuestionIndex, diseases, matchedDiseases],
   );
+
+  // Use useEffect to handle navigation
+  useEffect(() => {
+    if (currentSymptomQuestionIndex > data.length - 1) {
+      navigation.replace('PossibleDiseases', {});
+    }
+  }, [currentSymptomQuestionIndex, data.length, navigation]);
 
   return (
     <ImageBackground
@@ -40,10 +81,12 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
         {allQuestions.map((question, index) => {
           if (index === currentSymptomQuestionIndex) {
             return (
-              <Animated.View
-                style={[styles.questionContainer]}
-                key={question.ID}>
+              <View style={[styles.questionContainer]} key={question.ID}>
                 <View style={styles.counterContainer}>
+                  <Image
+                    source={require('../../assets/images/question.png')}
+                    style={{marginHorizontal: 4, justifyContent: 'center'}}
+                  />
                   <Text style={styles.counterText}>{index + 1}</Text>
                   <Text style={styles.counterLastIndexText}>
                     {' '}
@@ -51,7 +94,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
                   </Text>
                 </View>
                 <Text style={styles.questionText}>{question.Question}</Text>
-              </Animated.View>
+              </View>
             );
           }
         })}
@@ -98,7 +141,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     padding: 10,
     backgroundColor: '#F1F1F1',
-    borderRadius: 15,
+    borderRadius: 20,
   },
   counterText: {
     color: '#000000',
@@ -148,7 +191,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   yesButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#28C7AC',
     width: 150,
     borderRadius: 12,
   },
