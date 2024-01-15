@@ -33,7 +33,6 @@ const DepressiveEpisodeStack = function DepressiveEpisodeStack() {
           headerTitleAlign: 'center',
         })}
       />
-      <Stack.Screen name="SymptomChecker" component={SymptomChecker} />
       <Stack.Screen name="PossibleDiseases" component={PossibleDiseases} />
       <Stack.Screen
         name="DetailedEpisodeInfo"
