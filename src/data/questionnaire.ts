@@ -95,7 +95,7 @@ export const QUESTIONNAIRE = [
   {
     ID: 22,
     Symptom: 'Recurrent and intrusive thoughts.1',
-    Question: 'Do you experience recurrent and intrusive thoughts.1?',
+    Question: 'Do you experience recurrent and intrusive thoughts.?',
   },
   {
     ID: 23,
@@ -120,7 +120,7 @@ export const QUESTIONNAIRE = [
   {
     ID: 27,
     Symptom: 'Difficulty concentrating.',
-    Question: 'Do you experience difficulty concentrating.1?',
+    Question: 'Do you experience difficulty concentrating.?',
   },
   {
     ID: 28,
@@ -145,7 +145,7 @@ export const QUESTIONNAIRE = [
   {
     ID: 32,
     Symptom: 'Recurrent thought of death or suicide ',
-    Question: 'Do you experience recurrent thought of death or suicide ?',
+    Question: 'Do you experience recurrent thought of death or suicide?',
   },
   {
     ID: 33,
@@ -210,9 +210,9 @@ export const QUESTIONNAIRE = [
   {
     ID: 52,
     Symptom: 'Recurrent and intrusive thoughts',
-    Question: 'Do you experience recurrent and intrusive thoughts.2?',
+    Question: 'Do you experience recurrent and intrusive thoughts?',
   },
-  {ID: 53, Symptom: 'Dizziness', Question: 'Do you experience dizziness.1?'},
+  {ID: 53, Symptom: 'Dizziness', Question: 'Do you experience dizziness?'},
   {
     ID: 54,
     Symptom: 'Shortness of breath  from attack',
@@ -254,8 +254,8 @@ export const QUESTIONNAIRE = [
   {ID: 64, Symptom: 'Numbing', Question: 'Do you experience numbing?'},
   {
     ID: 65,
-    Symptom: 'Flashbacks.1',
-    Question: 'Do you experience flashbacks.1?',
+    Symptom: 'Flashbacks',
+    Question: 'Do you experience flashbacks?',
   },
   {
     ID: 66,
@@ -272,13 +272,13 @@ export const QUESTIONNAIRE = [
     Symptom: 'Self-mutilations',
     Question: 'Do you experience self-mutilations?',
   },
-  {ID: 69, Symptom: 'Anxiety.1', Question: 'Do you experience anxiety.1?'},
+  {ID: 69, Symptom: 'Anxiety', Question: 'Do you experience anxiety?'},
   {
     ID: 70,
     Symptom: 'Panic Disorder',
     Question: 'Do you experience panic disorder?',
   },
-  {ID: 71, Symptom: 'Fatigue.1', Question: 'Do you experience fatigue.1?'},
+  {ID: 71, Symptom: 'Fatigue', Question: 'Do you experience fatigue?'},
   {ID: 72, Symptom: 'Nausea', Question: 'Do you experience nausea?'},
   {
     ID: 73,
@@ -334,7 +334,7 @@ export const QUESTIONNAIRE = [
   {
     ID: 84,
     Symptom: 'Difficulty initiating sleep.1',
-    Question: 'Do you experience difficulty initiating sleep.1?',
+    Question: 'Do you experience difficulty initiating sleep.?',
   },
   {
     ID: 85,
@@ -448,8 +448,8 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 107,
-    Symptom: 'Recurrent outbursts of aggression.1',
-    Question: 'Do you experience recurrent outbursts of aggression.1?',
+    Symptom: 'Recurrent outbursts of aggression',
+    Question: 'Do you experience recurrent outbursts of aggression?',
   },
   {
     ID: 108,
@@ -498,9 +498,9 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 116,
-    Symptom: 'Decline in occupational and social functioning.1',
+    Symptom: 'Decline in occupational and social functioning.',
     Question:
-      'Do you experience decline in occupational and social functioning.1?',
+      'Do you experience decline in occupational and social functioning?',
   },
   {
     ID: 117,
@@ -509,8 +509,8 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 118,
-    Symptom: 'Variation in attention and alertness.1',
-    Question: 'Do you experience variation in attention and alertness.1?',
+    Symptom: 'Variation in attention and alertness.',
+    Question: 'Do you experience variation in attention and alertness?',
   },
   {
     ID: 119,
@@ -594,9 +594,9 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 134,
-    Symptom: 'Persistent patterns of lying, manipulation, and deceit.1',
+    Symptom: 'Persistent patterns of lying, manipulation, and deceit.',
     Question:
-      'Do you experience persistent patterns of lying, manipulation, and deceit.1?',
+      'Do you experience persistent patterns of lying, manipulation, and deceit?',
   },
   {
     ID: 135,
@@ -708,9 +708,9 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 153,
-    Symptom: "Recurrent inability to resist urges to pull out one's hair.1",
+    Symptom: "Recurrent inability to resist urges to pull out one's hair.",
     Question:
-      "Do you experience recurrent inability to resist urges to pull out one's hair.1?",
+      "Do you experience recurrent inability to resist urges to pull out one's hair.?",
   },
   {
     ID: 154,
@@ -720,9 +720,9 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 155,
-    Symptom: 'Recurrent failure to resist urges to set fires.1',
+    Symptom: 'Recurrent failure to resist urges to set fires.',
     Question:
-      'Do you experience recurrent failure to resist urges to set fires.1?',
+      'Do you experience recurrent failure to resist urges to set fires?',
   },
   {
     ID: 156,
@@ -733,16 +733,16 @@ export const QUESTIONNAIRE = [
   {
     ID: 157,
     Symptom:
-      "Recurrent and intense sexual fantasies, sexual urges, or behaviors involving the exposure of one's genitals to an unsuspecting person.1",
+      "Recurrent and intense sexual fantasies, sexual urges, or behaviors involving the exposure of one's genitals to an unsuspecting person.",
     Question:
-      "Do you experience recurrent and intense sexual fantasies, sexual urges, or behaviors involving the exposure of one's genitals to an unsuspecting person.1?",
+      "Do you experience recurrent and intense sexual fantasies, sexual urges, or behaviors involving the exposure of one's genitals to an unsuspecting person?",
   },
   {
     ID: 158,
     Symptom:
-      'Difficulty discarding possessions regardless of their actual value.1',
+      'Difficulty discarding possessions regardless of their actual value.',
     Question:
-      'Do you experience difficulty discarding possessions regardless of their actual value.1?',
+      'Do you experience difficulty discarding possessions regardless of their actual value?',
   },
   {
     ID: 159,
