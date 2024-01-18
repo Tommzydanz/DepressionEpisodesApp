@@ -19,13 +19,8 @@ const DepressiveEpisodeStack = function DepressiveEpisodeStack() {
       <Stack.Screen
         name="SymptomQuestions"
         component={SymptomQuestions}
-        options={({navigation}) => ({
-          headerTitle: 'Questions',
-          headerRight: () => (
-            <Pressable>
-              <Image source={require('../assets/images/depressive_img.png')} />
-            </Pressable>
-          ),
+        options={() => ({
+          headerShown: false,
           headerTitleStyle: {
             fontFamily: 'Roboto-Bold',
             textAlign: 'center',
