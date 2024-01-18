@@ -21,7 +21,6 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
 }) {
   const diseases = DISEASES;
   data = QUESTIONNAIRE;
-  const allQuestions = data;
   const [currentSymptomQuestionIndex, setCurrentSymptomQuestionIndex] =
     useState<number>(0);
   // Using useState to keep track of matched diseases
@@ -31,7 +30,6 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
     (questionId: number, answer: string) => {
       setCurrentSymptomQuestionIndex(currentSymptomQuestionIndex + 1);
 
-      // New array to store matched diseases
       const foundDiseases: string[] = [];
 
       // Find the symptom associated with the current question
@@ -57,20 +55,24 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
         }
       }
 
-      // if (currentSymptomQuestionIndex === data.length - 1) {
-      //   navigation.navigate('PossibleDiseases');
-      // }
+      if (currentSymptomQuestionIndex >= data.length - 1) {
+        return;
+      }
       console.log(`Answer to question ID ${questionId}: ${answer}`);
     },
-    [currentSymptomQuestionIndex, diseases, matchedDiseases],
+    [currentSymptomQuestionIndex, data.length, diseases, matchedDiseases],
   );
 
-  // Use useEffect to handle navigation
-  useEffect(() => {
-    if (currentSymptomQuestionIndex > data.length - 1) {
-      navigation.replace('PossibleDiseases', {});
-    }
-  }, [currentSymptomQuestionIndex, data.length, navigation]);
+  useEffect(
+    function componentDidMount() {
+      if (currentSymptomQuestionIndex >= data.length - 1) {
+        navigation.replace('PossibleDiseases', {
+          possibleDiseases: matchedDiseases,
+        });
+      }
+    },
+    [currentSymptomQuestionIndex, data.length, matchedDiseases, navigation],
+  );
 
   return (
     <ImageBackground
@@ -78,7 +80,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
       style={styles.container}>
       <Text style={styles.screenTitle}>Questions</Text>
       <View style={{flex: 1, alignContent: 'center', justifyContent: 'center'}}>
-        {allQuestions.map((question, index) => {
+        {data.map((question, index) => {
           if (index === currentSymptomQuestionIndex) {
             return (
               <View style={[styles.questionContainer]} key={question.ID}>
@@ -90,7 +92,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
                   <Text style={styles.counterText}>{index + 1}</Text>
                   <Text style={styles.counterLastIndexText}>
                     {' '}
-                    / {allQuestions.length}
+                    / {data.length}
                   </Text>
                 </View>
                 <Text style={styles.questionText}>{question.Question}</Text>
@@ -103,7 +105,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
         <Button
           style={styles.noButton}
           onPress={() =>
-            handleAnswer(allQuestions[currentSymptomQuestionIndex].ID, 'No')
+            handleAnswer(data[currentSymptomQuestionIndex].ID, 'No')
           }>
           {' '}
           No
@@ -111,7 +113,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
         <Button
           style={styles.yesButton}
           onPress={() =>
-            handleAnswer(allQuestions[currentSymptomQuestionIndex].ID, 'Yes')
+            handleAnswer(data[currentSymptomQuestionIndex].ID, 'Yes')
           }>
           {' '}
           Yes
@@ -124,7 +126,7 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 48,
+    paddingTop: 28,
     marginBottom: 23,
     // or any color that fits the background of your app
   },
@@ -183,7 +185,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 24,
-    marginBottom: 150,
+    marginBottom: 100,
   },
   noButton: {
     backgroundColor: '#363F55',
