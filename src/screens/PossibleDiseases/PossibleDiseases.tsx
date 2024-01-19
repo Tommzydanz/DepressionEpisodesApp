@@ -6,7 +6,6 @@ import {
   ImageBackground,
   FlatList,
   Dimensions,
-  Animated,
 } from 'react-native';
 import {PossibleDiseasesProp} from './interfaces';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -17,15 +16,6 @@ const PossibleDiseases: PossibleDiseasesProp = function PossibleDiseases({
   route,
 }) {
   const foundDiseases = route.params.possibleDiseases;
-  const fadeAnim = React.useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
-
-  React.useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 1500,
-      useNativeDriver: true,
-    }).start();
-  }, [fadeAnim]);
 
   return (
     <ImageBackground
@@ -40,9 +30,7 @@ const PossibleDiseases: PossibleDiseasesProp = function PossibleDiseases({
         data={foundDiseases}
         renderItem={({item, index}) => {
           return (
-            <Animated.View
-              key={index.toString()}
-              style={(styles.diseaseLabelContainer, {opacity: fadeAnim})}>
+            <View key={index.toString()} style={styles.diseaseLabelContainer}>
               <TouchableOpacity
                 onPress={() => {
                   console.log('Pressed');
@@ -50,7 +38,7 @@ const PossibleDiseases: PossibleDiseasesProp = function PossibleDiseases({
                 style={styles.diseaseCardContainer}>
                 <Text style={styles.diseaseLabel}>{item}</Text>
               </TouchableOpacity>
-            </Animated.View>
+            </View>
           );
         }}
         keyExtractor={(item, index) => index.toString()} // Using index as key
@@ -69,7 +57,7 @@ const styles = StyleSheet.create({
   },
   screenTitle: {
     fontSize: 24,
-    fontFamily: 'MonaSans-Bold',
+    fontWeight: 'bold',
     color: 'white',
     alignSelf: 'flex-start',
     paddingHorizontal: 24,
@@ -79,7 +67,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'white',
     paddingHorizontal: 24,
-    fontFamily: 'MonaSans-ExtraLight',
   },
   diseaseLabelContainer: {
     alignItems: 'flex-start',
@@ -91,7 +78,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: width - 50,
     paddingHorizontal: 16,
-    marginVertical: 16,
     borderRadius: 5,
     borderBottomWidth: 5,
     borderBottomColor: '#026f5b',
@@ -100,6 +86,5 @@ const styles = StyleSheet.create({
   diseaseLabel: {
     color: 'black',
     fontSize: 16,
-    fontFamily: 'MonaSans-Light',
   },
 });

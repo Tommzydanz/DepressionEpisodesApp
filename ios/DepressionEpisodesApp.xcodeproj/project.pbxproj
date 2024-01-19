@@ -12,16 +12,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3B10C3F3D0E14B6CB972F1DD /* MonaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0151AE57F616485BAB803BFA /* MonaSans-ExtraLight.ttf */; };
-		3C27FE9CDF3149BE8A04EAF6 /* MonaSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B2DF77ADD0456DB1C5E5FE /* MonaSansCondensed-Bold.ttf */; };
-		48D1C2A109CA41C79F28DB69 /* MonaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15470884DF964DB79CC44B13 /* MonaSans-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-DepressionEpisodesApp-DepressionEpisodesAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DepressionEpisodesApp-DepressionEpisodesAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		91867AA989854E298CDB1DFA /* MonaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A83BD3184644E7BB116988B /* MonaSans-Medium.ttf */; };
-		9897EECC6C3843FAAD47139D /* MonaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC81D39C54EA40ECB7032B59 /* MonaSans-Bold.ttf */; };
-		9A5B602B3506426981D5A8D4 /* MonaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92D669ED01524E2D9A99C842 /* MonaSans-Light.ttf */; };
-		D291DC85B558488A8B667B88 /* MonaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A57F24423F2948F0A9FEA7FB /* MonaSans-Regular.ttf */; };
-		E8B63AB780E54B49BBDBC09D /* MonaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 782ADC92B1284E6BB4B71BAC /* MonaSans-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,27 +30,19 @@
 		00E356EE1AD99517003FC87E /* DepressionEpisodesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepressionEpisodesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DepressionEpisodesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepressionEpisodesAppTests.m; sourceTree = "<group>"; };
-		0151AE57F616485BAB803BFA /* MonaSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-ExtraLight.ttf"; path = "../src/assets/fonts/MonaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DepressionEpisodesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepressionEpisodesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DepressionEpisodesApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DepressionEpisodesApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DepressionEpisodesApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DepressionEpisodesApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DepressionEpisodesApp/main.m; sourceTree = "<group>"; };
-		15470884DF964DB79CC44B13 /* MonaSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-SemiBold.ttf"; path = "../src/assets/fonts/MonaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-DepressionEpisodesApp-DepressionEpisodesAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DepressionEpisodesApp-DepressionEpisodesAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20B2DF77ADD0456DB1C5E5FE /* MonaSansCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSansCondensed-Bold.ttf"; path = "../src/assets/fonts/MonaSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-DepressionEpisodesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressionEpisodesApp.debug.xcconfig"; path = "Target Support Files/Pods-DepressionEpisodesApp/Pods-DepressionEpisodesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-DepressionEpisodesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressionEpisodesApp.release.xcconfig"; path = "Target Support Files/Pods-DepressionEpisodesApp/Pods-DepressionEpisodesApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DepressionEpisodesApp-DepressionEpisodesAppTests/Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-DepressionEpisodesApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DepressionEpisodesApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A83BD3184644E7BB116988B /* MonaSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-Medium.ttf"; path = "../src/assets/fonts/MonaSans-Medium.ttf"; sourceTree = "<group>"; };
-		782ADC92B1284E6BB4B71BAC /* MonaSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-ExtraBold.ttf"; path = "../src/assets/fonts/MonaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DepressionEpisodesApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.release.xcconfig"; path = "Target Support Files/Pods-DepressionEpisodesApp-DepressionEpisodesAppTests/Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		92D669ED01524E2D9A99C842 /* MonaSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-Light.ttf"; path = "../src/assets/fonts/MonaSans-Light.ttf"; sourceTree = "<group>"; };
-		A57F24423F2948F0A9FEA7FB /* MonaSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-Regular.ttf"; path = "../src/assets/fonts/MonaSans-Regular.ttf"; sourceTree = "<group>"; };
-		EC81D39C54EA40ECB7032B59 /* MonaSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MonaSans-Bold.ttf"; path = "../src/assets/fonts/MonaSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -138,7 +122,6 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				D6AC8DB2634740D98BE627F8 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -163,22 +146,6 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-DepressionEpisodesApp-DepressionEpisodesAppTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D6AC8DB2634740D98BE627F8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EC81D39C54EA40ECB7032B59 /* MonaSans-Bold.ttf */,
-				782ADC92B1284E6BB4B71BAC /* MonaSans-ExtraBold.ttf */,
-				0151AE57F616485BAB803BFA /* MonaSans-ExtraLight.ttf */,
-				92D669ED01524E2D9A99C842 /* MonaSans-Light.ttf */,
-				6A83BD3184644E7BB116988B /* MonaSans-Medium.ttf */,
-				A57F24423F2948F0A9FEA7FB /* MonaSans-Regular.ttf */,
-				15470884DF964DB79CC44B13 /* MonaSans-SemiBold.ttf */,
-				20B2DF77ADD0456DB1C5E5FE /* MonaSansCondensed-Bold.ttf */,
-			);
-			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,14 +244,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9897EECC6C3843FAAD47139D /* MonaSans-Bold.ttf in Resources */,
-				E8B63AB780E54B49BBDBC09D /* MonaSans-ExtraBold.ttf in Resources */,
-				3B10C3F3D0E14B6CB972F1DD /* MonaSans-ExtraLight.ttf in Resources */,
-				9A5B602B3506426981D5A8D4 /* MonaSans-Light.ttf in Resources */,
-				91867AA989854E298CDB1DFA /* MonaSans-Medium.ttf in Resources */,
-				D291DC85B558488A8B667B88 /* MonaSans-Regular.ttf in Resources */,
-				48D1C2A109CA41C79F28DB69 /* MonaSans-SemiBold.ttf in Resources */,
-				3C27FE9CDF3149BE8A04EAF6 /* MonaSansCondensed-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
