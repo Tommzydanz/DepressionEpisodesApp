@@ -120,7 +120,7 @@ export const QUESTIONNAIRE = [
   {
     ID: 27,
     Symptom: 'Difficulty concentrating.',
-    Question: 'Do you experience difficulty concentrating.?',
+    Question: 'Do you experience difficulty concentrating?',
   },
   {
     ID: 28,
@@ -144,13 +144,13 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 32,
-    Symptom: 'Recurrent thought of death or suicide ',
+    Symptom: 'Recurrent thought of death or suicide',
     Question: 'Do you experience recurrent thought of death or suicide?',
   },
   {
     ID: 33,
-    Symptom: 'Slowing mid-action ',
-    Question: 'Do you experience slowing mid-action ?',
+    Symptom: 'Slowing mid-action',
+    Question: 'Do you experience slowing mid-action?',
   },
   {ID: 34, Symptom: 'Fatigue', Question: 'Do you experience fatigue?'},
   {
@@ -194,8 +194,8 @@ export const QUESTIONNAIRE = [
   {ID: 44, Symptom: 'Sweating', Question: 'Do you experience sweating?'},
   {
     ID: 45,
-    Symptom: 'Muscle aches  ',
-    Question: 'Do you experience muscle aches  ?',
+    Symptom: 'Muscle aches',
+    Question: 'Do you experience muscle aches?',
   },
   {ID: 46, Symptom: 'Chest pain', Question: 'Do you experience chest pain?'},
   {ID: 47, Symptom: 'Dizziness', Question: 'Do you experience dizziness?'},
@@ -302,8 +302,8 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 77,
-    Symptom: 'Absence of menstrual cycle.1',
-    Question: 'Do you experience absence of menstrual cycle.1?',
+    Symptom: 'Absence of menstrual cycle',
+    Question: 'Do you experience absence of menstrual cycle?',
   },
   {
     ID: 78,
@@ -333,8 +333,8 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 84,
-    Symptom: 'Difficulty initiating sleep.1',
-    Question: 'Do you experience difficulty initiating sleep.?',
+    Symptom: 'Difficulty initiating sleep',
+    Question: 'Do you experience difficulty initiating sleep?',
   },
   {
     ID: 85,
@@ -498,7 +498,7 @@ export const QUESTIONNAIRE = [
   },
   {
     ID: 116,
-    Symptom: 'Decline in occupational and social functioning.',
+    Symptom: 'Decline in occupational and social functioning',
     Question:
       'Do you experience decline in occupational and social functioning?',
   },

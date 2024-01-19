@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
+    fontFamily: 'MonaSans-SemiBold',
   },
   pressed: {
     opacity: 0.75,
