@@ -95,7 +95,9 @@ const SymptomQuestions: SymptomQuestionsProp = function SymptomQuestions({
                     / {data.length}
                   </Text>
                 </View>
-                <Text style={styles.questionText}>{question.Question}</Text>
+                <View style={styles.questionTextHolder}>
+                  <Text style={styles.questionText}>{question.Question}</Text>
+                </View>
               </View>
             );
           }
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
   },
   screenTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'MonaSans-Bold',
     color: 'white',
     alignSelf: 'flex-start',
     paddingHorizontal: 24,
@@ -148,13 +150,14 @@ const styles = StyleSheet.create({
   counterText: {
     color: '#000000',
     fontSize: 14,
+    fontFamily: 'MonaSans-Bold',
     fontWeight: '500',
     opacity: 0.6,
     marginRight: 2,
   },
   counterLastIndexText: {
     color: '#000000',
-    fontWeight: 'bold',
+    fontFamily: 'MonaSans-Bold',
     fontSize: 14,
     opacity: 0.6,
   },
@@ -167,17 +170,19 @@ const styles = StyleSheet.create({
     height: 400,
     width: '90%',
     borderRadius: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 16,
     marginHorizontal: 22,
   },
   questionText: {
-    fontSize: 28,
-    lineHeight: 54,
-    marginBottom: 120,
-    fontWeight: 'bold',
+    fontSize: 24,
+    fontFamily: 'MonaSans-Medium',
+    lineHeight: 40,
     textAlign: 'center',
-    alignSelf: 'center',
     color: 'black',
+  },
+  questionTextHolder: {
+    flex: 1,
+    justifyContent: 'center',
   },
   answerContainer: {
     marginTop: 40,
@@ -199,6 +204,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 24,
+    fontFamily: 'MonaSans-SemiBold',
     color: '#fff', // white color for the text
   },
 });
